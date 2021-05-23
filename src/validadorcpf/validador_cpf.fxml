@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="validadorcpf.ValidadorCpfController" 
+    xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" styleClass="root">
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+    
+    <Text id="titulo-text" text="Verifica CPF válido" 
+        GridPane.columnIndex="0" GridPane.rowIndex="0"
+        GridPane.columnSpan="2"/>
+ 
+    <Label text="Digitar CPF:"
+        GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+ 
+    <TextField id="textocpf"
+        GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    
+    <HBox spacing="10" alignment="bottom_right" 
+        GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <Button text="Verificar"     
+        onAction="#handleSubmitButtonAction"/>
+    </HBox>
+
+    <Text fx:id="qualstatus"
+       GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="2"/>
+
+    <Text fx:id="estadocpf"
+       GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.columnSpan="2"/>
+        
+    <stylesheets> <URL value="@Validador.css"/>
+    </stylesheets>
+
+    </GridPane>
